@@ -1,0 +1,28 @@
+{
+  "name": "project-liftoff",
+  "version": "1.0.0",
+  "description": "LiftOff project due December 2022",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "heroku-postbuild": ". gradlew build",
+    "build:win": "gradlew.bat build",
+    "serve:win": "java -jar build/libs/project-liftoff-0.0.1-SNAPSHOT.jar",
+    "dev:win": "npm run build:win && npm run serve:win"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuanJSoto/Project-Liftoff.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JuanJSoto/Project-Liftoff/issues"
+  },
+  "homepage": "https://github.com/JuanJSoto/Project-Liftoff#readme",
+  "dependencies": {
+    "@types/googlemaps": "^3.43.3",
+    "mysql": "^2.18.1"
+  }
+}

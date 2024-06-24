@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+
+<head th:replace="fragments :: head">
+    <script src="../script.js"></script>
+
+    <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOuF8T4XovaUYJeaxH_gbBGXvzI67OH78&callback=initMap&v=weekly"
+            defer>
+    </script>
+
+</head>
+
+<body>
+
+<div th:replace="fragments :: page-header"></div>
+
+<div class="container">
+    <img th:src="@{/images/collage.jpg}" class="search-image" alt="">
+</div>
+
+<div class='container' style="30px;">
+    <form id='pet-form'>
+        <div class='form'>
+            <label for='animal'>Select which pet type to view availability for adoption in your area!</label>
+            <p style="font-size: 18px;">*Some responses will be displayed multiple times from PetFinder.com! Not all pets have an email, phone number, and address!*</p>
+            <select id='animal' style="font-family: Ink Free;">
+                <option value='dog'>Dogs</option>
+                <option value='cat'>Cats</option>
+            </select>
+            <input type='text' id='zip' class='textbox' placeholder=' City/Zipcode'>
+            <input type="submit" id='submitButton' value='Find' class='btn' style="font-family: Ink Free;">
+        </div>
+    </form>
+</div>
+
+<script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOuF8T4XovaUYJeaxH_gbBGXvzI67OH78&callback=initMap&v=weekly"
+        defer>
+</script>
+<div id='petResults'>
+    <script src="../script.js"></script>
+</div>
+<div id="map"></div>
+
+</body>
+</html>
